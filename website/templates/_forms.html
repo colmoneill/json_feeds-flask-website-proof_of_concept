@@ -6,14 +6,14 @@
 {% else %}
   <div class="clearfix {% if field.errors %}error{% endif %}">
     {{ field.label }}
-    <div class="input">
+    <div class="input-group input-group-lg">
       {% if field.name == "body" %}
-        {{ field(rows=10, cols=40) }}
+        {{ field(rows=10, cols=80) }}
       {% else %}
         {{ field() }}
       {% endif %}
       {% if field.errors or field.help_text %}
-        <span class="help-inline">
+        <span class="input-group-addon" id="sizing-addon1">
         {% if field.errors %}
           {{ field.errors|join(' ') }}
         {% else %}
@@ -27,3 +27,8 @@
 {% endfor %}
 </fieldset>
 {% endmacro %}
+
+<div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+</div>
