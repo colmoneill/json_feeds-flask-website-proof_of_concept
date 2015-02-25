@@ -9,7 +9,7 @@ class ListView(MethodView):
 
 	def get(self):
 		posts = Post.objects.all()
-		return render_template('posts/lists.html', posts=posts)
+		return render_template('posts/list.html', posts=posts)
 
 class DetailView(MethodView):
 
