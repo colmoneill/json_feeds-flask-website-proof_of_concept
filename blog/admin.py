@@ -3,8 +3,8 @@ from flask.views import MethodView
 
 from flask.ext.mongoengine.wtf import model_form
 
-from tumblelog.auth import requires_auth
-from tumblelog.models import Post, Comment
+from blog.auth import requires_auth
+from blog.models import Post, Comment
 
 admin = Blueprint('admin', __name__, template_folder='templates')
 
