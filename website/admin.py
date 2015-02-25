@@ -4,7 +4,7 @@ from flask.views import MethodView
 from flask.ext.mongoengine.wtf import model_form
 
 from website.auth import requires_auth
-from website.models import Post, BlogPost, Video, Image, Quote, Comment
+from website.models import Post, BlogPost, Video, Image, Quote, Comment, Exhibition
 
 admin = Blueprint('admin', __name__, template_folder='templates')
 
@@ -27,6 +27,7 @@ class Detail(MethodView):
 		'video': Video,
 		'image': Image,
 		'quote': Quote,
+		'exhibition' : Exhibition,
 	}
 
 	def get_context(self, slug=None):

@@ -14,7 +14,7 @@
 						 <span class="caret"></span>
 					 </a>
 					 <ul class="dropdown-menu">
-						 {% for type in ('post', 'video', 'image', 'quote') %}
+						 {% for type in ('exhibition', '', '', '') %}
 						 <li><a href="{{ url_for("admin.create", type=type) }}">{{ type|title }}</a></li>
 						 {% endfor %}
 					 </ul>

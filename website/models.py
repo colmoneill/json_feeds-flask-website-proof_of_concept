@@ -41,6 +41,15 @@ class Quote(Post):
 	body = db.StringField(required=True)
 	author = db.StringField(verbose_name="Author Name", required=True, max_length=255)
 
+class Exhibition(Post):
+	exhibition_name = db.StringField(verbose_name="Exhibition Name", required=True, max_length=255)
+	exhibition_artist = db.StringField(verbose_name="Artist Name", required=True, max_length=255)
+	exhibition_artist = db.StringField(verbose_name="Additionnal Artist name", required=False, max_length=255)
+	exhibition_artist = db.StringField(verbose_name="Additionnal Artist name", required=False, max_length=255)
+	exhibition_key_image_url = db.StringField(verbose_name="Key exhibition image", required=False, max_length=255)
+	body = db.StringField(required=False)
+
+
 class Comment(db.EmbeddedDocument):
 	created_at = db.DateTimeField(default=datetime.datetime.now, required=True)
 	body = db.StringField(verbose_name="Comment", required=True)
