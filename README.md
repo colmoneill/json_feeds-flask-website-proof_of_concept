@@ -1,19 +1,6 @@
-# flask-tumblelog
-following a tutorial for Tumblelog Application with Flask and MongoEngine from mongodb.org
+# Flask micro-cms for a gallery
 
-^irtualenv                                     
-|                                              
-+->tumblelog system                            
-    +-->__init__.py                            
-        manage.py                              
-        models.py                              
-        views.py  +---> templates+>posts       
-        admin.py                 |->base.html  
-        auth.py                  |->list.html  
-                                 +-^detail.html
-                                 |             
-                                 +>admin       
-                                  +>base.html  
-                                  |>list.html  
-                                  +^detail.html
+Aim of the project is to recieve, manipulate and output data from an outside source into a local database.
+
+The micro CMS will come into play to manipulate and add to this database, ultimately being the only place to update the website.
 
