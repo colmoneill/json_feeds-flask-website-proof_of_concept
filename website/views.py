@@ -1,6 +1,6 @@
 from flask import Blueprint, request, redirect, render_template, url_for
 from flask.views import MethodView
-from blog.models import Post, Comment
+from website.models import Post, Comment
 from flask.ext.mongoengine.wtf import model_form
 
 posts = Blueprint('posts', __name__, template_folder='templates')

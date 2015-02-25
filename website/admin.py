@@ -3,8 +3,8 @@ from flask.views import MethodView
 
 from flask.ext.mongoengine.wtf import model_form
 
-from blog.auth import requires_auth
-from blog.models import Post, BlogPost, Video, Image, Quote, Comment
+from website.auth import requires_auth
+from website.models import Post, BlogPost, Video, Image, Quote, Comment
 
 admin = Blueprint('admin', __name__, template_folder='templates')
 
